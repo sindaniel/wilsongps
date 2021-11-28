@@ -94,4 +94,20 @@ class ClientController extends Controller
 
         return redirect()->route('clients.index')->with('success', "Cliente eliminado");
     }
+
+
+    public function api(Request $request, $number){
+
+        
+        $client = Client::wherePhone($number)->first();
+        $phone = 0;
+        if($client){
+            $phone = (int)$client->phone;
+        }
+
+        return [
+            'phone'=>$phone
+        ];
+
+    }
 }
