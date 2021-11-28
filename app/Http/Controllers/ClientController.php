@@ -106,7 +106,7 @@ class ClientController extends Controller
         }
 
         return [
-            'phone'=>$phone
+            'celular'=>$phone
         ];
 
     }
