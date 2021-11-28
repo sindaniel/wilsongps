@@ -13,9 +13,18 @@ class CreateTables extends Migration
      */
     public function up()
     {
-        Schema::create('tables', function (Blueprint $table) {
+        Schema::create('clients', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->timestamps();
+        });
+
+
+        Schema::create('numbers', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('phone');
+            $table->integer('client_id');
         });
     }
 

@@ -73,6 +73,15 @@
         </nav>
 
         <main class="py-4 container">
+
+            @if (Session::has('success'))
+                <div class="alert alert-success" role="alert">
+                    {{Session::get('success')}}
+                </div>
+                
+            @endif
+
+
             <div class="card">
                 <div class="card-body">
                     @yield('content')
