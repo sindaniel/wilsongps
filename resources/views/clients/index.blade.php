@@ -26,7 +26,7 @@
                         {{ $client->phone }} <br>
                         <small class='text-muted'>{{ $client->type }}</small>
                     </td>
-                    <td class='text-right'> 
+                    <td class='text-right'  style="white-space:nowrap"> 
                         <a class="btn btn-primary" href="{{ route('clients.edit', $client) }}">Actualizar</a>    
                         <form method="POST" onclick="return confirm('Desea eliminar este registro?');" action="{{ route('clients.destroy', $client) }}" style="display: inline-block">
                             @csrf
