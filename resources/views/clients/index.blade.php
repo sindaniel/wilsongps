@@ -10,7 +10,7 @@
         <thead>
             <tr>
                 <th scope="col">Cliente</th>
-                <th scope="col">Tipo</th>
+           
                 <th scope="col">Numero</th>
                 <th></th>
                
@@ -20,9 +20,12 @@
             @foreach ($clients as $client)
             <tr >
                 <td>{{ $client->name }}</td>
-                <td>{{ $client->type }}</td>
+                
 
-                <td>{{ $client->phone }}</td>
+                <td>
+                    {{ $client->phone }} <br>
+                    <small class='text-muted'>{{ $client->type }}</small>
+                </td>
                 <td class='text-right'> 
                     <a class="btn btn-primary" href="{{ route('clients.edit', $client) }}">Actualizar</a>    
                     <form method="POST" onclick="return confirm('Desea eliminar este registro?');" action="{{ route('clients.destroy', $client) }}" style="display: inline-block">
