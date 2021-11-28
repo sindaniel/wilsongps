@@ -13,8 +13,12 @@
 
     {{ Aire::number('phone', 'Número gps')}}
       
-    
-  {{ Aire::submit('Editar usuario') }}
+
+    <p>
+        {{ Aire::submit('Editar usuario') }}
+        <a class="btn btn-secondary float-right" href="{{ route('clients.index') }}" >Regresar</a>
+    </p>
+  
     
   {{ Aire::close() }}
 

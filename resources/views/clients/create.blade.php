@@ -13,7 +13,11 @@
     {{ Aire::number('phone', 'Número gps')}}
       
     
-  {{ Aire::submit('Crear usuario') }}
+  
+  <p>
+    {{ Aire::submit('Crear usuario') }}
+    <a class="btn btn-secondary float-right" href="{{ route('clients.index') }}" >Regresar</a>
+  </p>
     
   {{ Aire::close() }}
 
