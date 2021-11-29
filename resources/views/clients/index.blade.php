@@ -12,6 +12,7 @@
                     <th scope="col">Cliente</th>
             
                     <th scope="col">Numero</th>
+                    <th scope="col">Fecha de creación</th>
                     <th></th>
                 
                 </tr>
@@ -23,8 +24,13 @@
                     
 
                     <td>
-                        {{ $client->phone }} <br>
+                        <p style="line-height: 14px">
+                            {{ $client->phone }} <br>
                         <small class='text-muted'>{{ $client->type }}</small>
+                        </p>
+                    </td>
+                    <td>
+                        {{ $client->created_at->format('Y-m-d') }}
                     </td>
                     <td class='text-right'  style="white-space:nowrap"> 
                         <a class="btn btn-primary" href="{{ route('clients.edit', $client) }}">Actualizar</a>    
